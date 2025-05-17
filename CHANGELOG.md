@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ---
 
 ## [1.0.0] - 2025-05-17
+### Added
+- Readme.md with usage instructions and setup.
+
+## [1.0.0] - 2025-05-17
 
 ### Added
 - Initial release of `flutter_stetho_interceptor`.

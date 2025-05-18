@@ -12,8 +12,10 @@ It enables powerful debugging of network calls, similar to Chrome's Network tab,
 - Intercepts and logs all HTTP requests made via Dart's `HttpClient`
 - Displays network traffic (requests, responses, headers, body, etc.) in Chrome DevTools
 - Supports streaming of request/response bodies
-- Inspired by and modernized from the deprecated `flutter_stetho` plugin
 
+---
+## 👨‍💻Demo
+![Demo](demo.gif)
 ---
 
 ## 🔧 Installation

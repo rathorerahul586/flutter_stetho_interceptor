@@ -22,6 +22,13 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^5.0.0
 
+topics:
+  - debugging
+  - flutter-inspector
+  - dio-http-inspector
+  - flutter-stetho
+  - api-inspector
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -42,13 +49,3 @@ flutter:
       android:
         package: com.rathorerahul586.flutter_stetho_interceptor
         pluginClass: FlutterStethoInterceptorPlugin
-
-  topics:
-    - debugging
-    - network
-    - android
-    - inspector
-    - dio http
-    - stetho
-    - flutter stetho
-    - api inspector

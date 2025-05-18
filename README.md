@@ -1,38 +1,7 @@
 # flutter_stetho_interceptor
 
-**flutter_stetho_interceptor** is a Flutter plugin to inspect HTTP API requests and responses in **Chrome DevTools** using [Facebook's Stetho](https://github.com/facebook/stetho).  
-It enables powerful debugging of network calls, similar to Chrome's Network tab, for your Flutter Android applications.
-
-> ⚠️ **Note**: This plugin supports **only Android** and is based on the now-discontinued `flutter_stetho` package.
-
----
-
-## ✨ Features
-
-- Intercepts and logs all HTTP requests made via Dart's `HttpClient`
-- Displays network traffic (requests, responses, headers, body, etc.) in Chrome DevTools
-- Supports streaming of request/response bodies
-
----
-## 👨‍💻Demo
-![Demo](demo.gif)
----
-
-## 🔧 Installation
-
-Add this to your `pubspec.yaml` file:
-
-```yaml
-dependencies:
-  flutter_stetho_interceptor: ^0.0.1
-```
-
-🚀 Getting Started
-# flutter_stetho_interceptor
-
 [![build](https://img.shields.io/github/actions/workflow/status/rathorerahul586/flutter_stetho_interceptor/build.yml?label=build)](https://github.com/rathorerahul586/flutter_stetho_interceptor/actions)
 
-
 **flutter_stetho_interceptor** is a Flutter plugin to inspect HTTP API requests and responses in **Chrome DevTools** using [Facebook's Stetho](https://github.com/facebook/stetho).  
 It enables powerful debugging of network calls, similar to Chrome's Network tab, for your Flutter Android applications.
 
@@ -45,8 +14,10 @@ It enables powerful debugging of network calls, similar to Chrome's Network tab,
 - Intercepts and logs all HTTP requests made via Dart's `HttpClient`
 - Displays network traffic (requests, responses, headers, body, etc.) in Chrome DevTools
 - Supports streaming of request/response bodies
-- Inspired by and modernized from the deprecated `flutter_stetho` plugin
+---
 
+## 👨‍💻Demo
+![Demo](demo.gif)
 ---
 
 ## 🔧 Installation
@@ -62,7 +33,7 @@ dependencies:
 ## 🚀 Getting Started
 - **Initialize StethoFlutter:** In your main.dart, call the `FlutterStethoInterceptor.initialize();` before any HTTP requests:
 
- ```
+ ```dart
  import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_stetho_interceptor/flutter_stetho_interceptor.dart';

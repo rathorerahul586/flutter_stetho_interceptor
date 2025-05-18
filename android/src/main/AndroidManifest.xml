@@ -1,2 +1,2 @@
-<manifest package="com.rathorerahul586.flutterstethointerceptor">
-</manifest>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rathorerahul586.flutter_stetho_interceptor"/>

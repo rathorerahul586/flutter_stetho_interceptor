@@ -1,4 +1,4 @@
-package com.rathorerahul586.flutterstethointerceptor
+package com.rathorerahul586.flutter_stetho_interceptor
 
 import android.content.Context
 import com.facebook.stetho.Stetho

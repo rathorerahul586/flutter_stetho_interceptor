@@ -37,5 +37,5 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.rathorerahul586.flutterstethointerceptor
+        package: com.rathorerahul586.flutter_stetho_interceptor
         pluginClass: FlutterStethoInterceptorPlugin

@@ -1,4 +1,4 @@
-package com.rathorerahul586.flutterstethointerceptor
+package com.rathorerahul586.flutter_stetho_interceptor
 
 import com.facebook.stetho.inspector.network.NetworkEventReporter.InspectorRequest
 import java.io.IOException

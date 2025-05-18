@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_stetho_interceptor/flutter_stetho_inspector.dart';
+import 'package:flutter_stetho_interceptor/flutter_stetho_interceptor.dart';
 import 'package:http/http.dart' as http;
 
 void main() {

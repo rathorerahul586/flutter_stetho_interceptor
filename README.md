@@ -25,7 +25,7 @@ network debug Android Flutter
 ---
 
 ## 👨‍💻Demo
-![Demo](demo.gif)
+![Demo](https://github.com/rathorerahul586/flutter_stetho_interceptor/blob/main/demo.gif)
 ---
 
 ## 🔧 Installation

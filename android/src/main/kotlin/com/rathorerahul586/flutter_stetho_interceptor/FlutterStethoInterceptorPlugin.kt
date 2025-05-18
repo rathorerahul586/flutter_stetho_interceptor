@@ -2,9 +2,13 @@ package com.rathorerahul586.flutter_stetho_interceptor
 
 import android.content.Context
 import com.facebook.stetho.Stetho
+import com.facebook.stetho.Stetho.DefaultDumperPluginsBuilder
+import com.facebook.stetho.Stetho.DefaultInspectorModulesBuilder
+import com.facebook.stetho.dumpapp.DumperPlugin
 import com.facebook.stetho.inspector.network.DefaultResponseHandler
 import com.facebook.stetho.inspector.network.NetworkEventReporter
 import com.facebook.stetho.inspector.network.NetworkEventReporterImpl
+import com.facebook.stetho.inspector.protocol.ChromeDevtoolsDomain
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -30,6 +34,7 @@ class FlutterStethoInterceptorPlugin : FlutterPlugin, MethodCallHandler {
     private val queues =
         mutableMapOf<String, LinkedBlockingQueue<QueueItem>>()
     private lateinit var context: Context
+    private var initializer: Stetho.Initializer? = null
 
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
@@ -157,7 +162,16 @@ class FlutterStethoInterceptorPlugin : FlutterPlugin, MethodCallHandler {
 
     private fun initStetho() {
         android.util.Log.d(TAG, "Initializing stetho")
-        Stetho.initializeWithDefaults(context)
+        initializer = object : Stetho.Initializer(context) {
+            override fun getDumperPlugins(): Iterable<DumperPlugin>? {
+                return DefaultDumperPluginsBuilder(context).finish()
+            }
+
+            override fun getInspectorModules(): Iterable<ChromeDevtoolsDomain>? {
+                return DefaultInspectorModulesBuilder(context).finish()
+            }
+        }
+        Stetho.initialize(initializer)
     }
 
 

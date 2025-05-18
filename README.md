@@ -1,7 +1,5 @@
 # flutter_stetho_interceptor
 
-[![build](https://img.shields.io/github/actions/workflow/status/rathorerahul586/flutter_stetho_interceptor/build.yml?label=build)](https://github.com/rathorerahul586/flutter_stetho_interceptor/actions)
-
 **flutter_stetho_interceptor** is a Flutter plugin to inspect HTTP API requests and responses in **Chrome DevTools** using [Facebook's Stetho](https://github.com/facebook/stetho).  
 It enables powerful debugging of network calls, similar to Chrome's Network tab, for your Flutter Android applications.
 
@@ -39,9 +37,10 @@ import 'package:http/http.dart' as http;
 import 'package:flutter_stetho_interceptor/flutter_stetho_interceptor.dart';
 
 void main() {
-  StethoFlutter.initialize(); // <-- Initialize plugin
+  // Initialize plugin in your main function
+  FlutterStethoInterceptor.initialize();
 
-  runApp(MyApp(client: http.Client()));
+  runApp(MyApp());
 }
 ```
 - **Make Requests:** Make requests using http.Client or HttpClient

@@ -6,8 +6,7 @@ version: 1.0.1
 homepage: https://github.com/rathorerahul586/flutter_stetho_interceptor
 
 environment:
-  sdk: ">=3.7.0 <4.0.0"
-  flutter: ">=3.3.0"
+  sdk: ">=2.18.0 <4.0.0"
 
 dependencies:
   flutter:

@@ -6,7 +6,7 @@ description: "A Flutter plugin to inspect HTTP and HTTPS API requests directly i
 repository: https://github.com/rathorerahul586/flutter_stetho_interceptor
 issue_tracker: https://github.com/rathorerahul586/flutter_stetho_interceptor/issues
 
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/rathorerahul586/flutter_stetho_interceptor
 
 environment:

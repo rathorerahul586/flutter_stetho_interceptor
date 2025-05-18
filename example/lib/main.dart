@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stetho_interceptor/flutter_stetho_interceptor.dart';
 import 'package:http/http.dart' as http;
@@ -7,13 +8,21 @@ void main() {
   FlutterStethoInterceptor.initialize();
 
   // Run the example app with an injected http.Client.
-  runApp(FlutterStethoExample(client: http.Client()));
+  runApp(FlutterStethoExample(
+    client: http.Client(),
+    dioClient: Dio(),
+  ));
 }
 
 class FlutterStethoExample extends StatelessWidget {
   final http.Client client;
+  final Dio dioClient;
 
-  const FlutterStethoExample({super.key, required this.client});
+  const FlutterStethoExample({
+    super.key,
+    required this.client,
+    required this.dioClient,
+  });
 
   /// Fetches a sample JSON from a public API and logs the response.
   Future<void> fetchJson() async {
@@ -24,6 +33,21 @@ class FlutterStethoExample extends StatelessWidget {
         headers: {'Authorization': 'token'}, // Example header
       );
       debugPrint('Response body: ${response.body}');
+    } catch (e) {
+      debugPrint('Error fetching JSON: $e');
+    }
+  }
+
+  /// Fetches a sample JSON from a public API and logs the response.
+  Future<void> fetchJsonDio() async {
+    debugPrint('Fetching JSON Using Dio client...');
+    try {
+      final response = await dioClient.get(
+        'https://jsonplaceholder.typicode.com/posts/1',
+        options: Options(headers: {'Authorization': 'token'}),
+      );
+
+      debugPrint('Response body: ${response.data}');
     } catch (e) {
       debugPrint('Error fetching JSON: $e');
     }
@@ -71,7 +95,7 @@ class FlutterStethoExample extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: TextButton(
-                  onPressed: fetchJson,
+                  onPressed: fetchJsonDio,
                   child: const Text('Fetch JSON'),
                 ),
               ),

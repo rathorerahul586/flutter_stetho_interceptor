@@ -1,13 +1,16 @@
 name: flutter_stetho_interceptor
-description: "A Flutter plugin to inspect HTTP(S) API requests directly in Chrome DevTools using Facebook's Stetho.
-  This plugin is Android-only and built on top of Facebook's Stetho SDK and inspired by the now-discontinued
+description: "A Flutter plugin to inspect HTTP and HTTPS API requests directly in Chrome DevTools using Facebook's Stetho.
+  It helps visualize network calls, headers, body and responses directly in Chrome. This plugin is Android-only and built on top of Facebook's Stetho SDK and inspired by the now-discontinued
   flutter_stetho package."
-version: 1.0.1
+
+repository: https://github.com/rathorerahul586/flutter_stetho_interceptor
+issue_tracker: https://github.com/rathorerahul586/flutter_stetho_interceptor/issues
+
+version: 1.0.2
 homepage: https://github.com/rathorerahul586/flutter_stetho_interceptor
 
 environment:
-  sdk: ">=3.7.0 <4.0.0"
-  flutter: ">=3.3.0"
+  sdk: ">=2.18.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -39,3 +42,13 @@ flutter:
       android:
         package: com.rathorerahul586.flutter_stetho_interceptor
         pluginClass: FlutterStethoInterceptorPlugin
+
+  topics:
+    - debugging
+    - network
+    - android
+    - inspector
+    - dio http
+    - stetho
+    - flutter stetho
+    - api inspector

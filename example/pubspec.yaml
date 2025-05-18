@@ -18,6 +18,7 @@ dependencies:
     sdk: flutter
 
   http: ^1.4.0
+  dio: ^5.8.0+1
 
   flutter_stetho_interceptor:
     # When depending on this package from a real application you should use:

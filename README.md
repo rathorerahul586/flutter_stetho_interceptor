@@ -1,4 +1,5 @@
 # flutter_stetho_interceptor
+[![pub package](https://img.shields.io/pub/v/flutter_stetho_interceptor.svg)](https://pub.dev/packages/flutter_stetho_interceptor)
 
 A Flutter plugin to inspect HTTP API calls and responses on Android using **Chrome DevTools**,
 powered by [Facebook’s Stetho](https://github.com/facebook/stetho).

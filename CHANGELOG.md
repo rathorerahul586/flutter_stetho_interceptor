@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.3] - 2025-05-18
+  ### Fix
+- Demo Gif
+
 ## [1.0.2] - 2025-05-18
 
 ### Added
